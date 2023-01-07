@@ -7,14 +7,14 @@ This document covers my experience with hortonworks data platform.
 -------------
 
 ## Hadoop
-In easy words, Hadoop is a distributed file system that allows any sort of computation over files stored in the distributed file system. Hadoop consists of 2 things
+In easy words, Hadoop is a distributed file system that allows any sort of computation over files stored in the distributed file system. Hadoop consists of 2 major things
 1. The Distributed File System (also called HDFS or Hadoop Distributed File System) - Stores files and provides read , writes, update and delete capabilities on those files, just like any file system. The difference between this file system and the normal unix file system is that HDFS auto manages data replication and splitting up of large files across commodity hardware. A user need only specify replication factor, the HDFS will ensure that those many copies are available on the entire cluster of servers in a fault tollerant manner. The ability of HDFS to store large files over multiple small commodity hardware paves way for horizontal scaling instead of vertical scaling. Before hadoop if you had a file of size 50TB and and you have 10 servers of 10 TB data storeage each, you would have to buy new vertically larger server to store the 50TB file. With a distributed file system, you can now store that 50TB file over the already availble 10 servers of 10 TB each. It is due to this distributed nature and inbuilt replication that this file system is more reliable than the traditional unix file system. 
 
 2. Implementation of MapReduce algorithm (this implementation is co-incidently also called MapReduce) - It is because of this implementation that we can simply provide the function that needs to be applied on data stored in the HDFS. Simply put it abstracts away the painful complexity of applying functions on the distributed nature of the data in HDFS.
 
 
 ## What is HDP ?
-The Hortonworks Data Platform (HDP) is a security-rich, enterprise-ready, open source Apache Hadoop distribution based on a centralized architecture (YARN). Simply put HDP allows you to use Hadoop on Production. In other terms HDP is a production ready data ware house that uses hadoop as its base layer.
+The Hortonworks Data Platform (HDP) is a security-rich, enterprise-ready, open source Apache Hadoop distribution based on a centralized architecture (YARN). Simply put HDP allows you to use Hadoop on Production. In other terms HDP is a production ready data warehouse that uses hadoop as its base layer.
 
 So basically HDP open source frameworks allows a person to set up his own data warehouse. 
 
